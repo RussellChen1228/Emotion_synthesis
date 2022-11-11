@@ -23,15 +23,15 @@ Emotions are include neutral, cry, scary, sad, angry and happy.
 1. **prepare a corpus:**
 
    - Put `metadata.scv` in `./corpus`: 
-   - There are example in `./corpus/metadata.scv`
-   - In each rows: `wav_file_name + | + text`
-   - wav_file_name not include file extension
+      - There are example in `./corpus/metadata.scv`
+      - In each rows: `wav_file_name + | + text`
+      - wav_file_name not include file extension
 
    - Put wavs file in  `./corpus/wavs`
-   - Emotion set: E01:happy, E2:sad, E03:cry, E04:scary, E05:angry, SXX:neutral
-   - Wav file name: EmotionSet_SpeakerID_TextNumber
-   - Example: E01_M03_001.wav (Emotion=happy, SpeakerId=M03, TextNumber=001)
-   - Example: S13_M13_005.wav (Emotion=neutral, SpeakerId=M13, TextNumber=005)
+      - Emotion set: E01:happy, E2:sad, E03:cry, E04:scary, E05:angry, SXX:neutral
+      - Wav file name: EmotionSet_SpeakerID_TextNumber
+      - Example: E01_M03_001.wav (Emotion=happy, SpeakerId=M03, TextNumber=001)
+      - Example: S13_M13_005.wav (Emotion=neutral, SpeakerId=M13, TextNumber=005)
 
 2. **Preprocess the data**
     
