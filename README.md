@@ -22,21 +22,23 @@ Emotions are include neutral, cry, scary, sad, angry and happy.
 
 1. **prepare a corpus:**
 
-   - Put `metadata.scv` in `./corpus`: 
-      - There are example in `./corpus/metadata.scv`
-      - In each rows: `wav_file_name + | + text`
-      - wav_file_name not include file extension
+   - Put `metadata.scv` in `./corpus`:
+      - There are example in `./corpus/metadata.scv`.
+      - In each rows: `wav_file_name + | + text`.
+      - wav_file_name not include file extension.
 
-   - Put wavs file in  `./corpus/wavs`
-      - Emotion set: E01:happy, E2:sad, E03:cry, E04:scary, E05:angry, SXX:neutral
-      - Wav file name: EmotionSet_SpeakerID_TextNumber
-      - Example: E01_M03_001.wav (Emotion=happy, SpeakerId=M03, TextNumber=001)
-      - Example: S13_M13_005.wav (Emotion=neutral, SpeakerId=M13, TextNumber=005)
+   - Put wavs file in  `./corpus/wavs`:
+      - Emotion set: E01:happy, E2:sad, E03:cry, E04:scary, E05:angry, SXX:neutral.
+      - Wav file name: EmotionSet_SpeakerID_TextNumber.
+      - Example: E01_M03_001.wav (Emotion=happy, SpeakerId=M03, TextNumber=001).
+      - Example: S13_M13_005.wav (Emotion=neutral, SpeakerId=M13, TextNumber=005).
+
+   - `check_corpus.py`: Make sure `./corpus/wavs/*.wav` and `./corpus/metadata.scv` are consistent.
 
 2. **Preprocess the data**
     
    ```
-   python3 preprocess.py --dataset blizzard2013
+   python3 preprocess.py
    ```
 
 3. **Train a model**
@@ -52,10 +54,10 @@ Emotions are include neutral, cry, scary, sad, angry and happy.
 4. **Get embedding**
 
    ```
-   python3 get_embedding.py
+   python3 record_embedding.py
    ```
 
-   Record style embedding of all wavs, and save in `./embeddings/style`
+   Call `get_embedding.py` to record style embedding of all wavs, and save in `./embeddings/style`.
 
 5. **Show embedding**
    
@@ -70,11 +72,15 @@ Emotions are include neutral, cry, scary, sad, angry and happy.
    ```
    python3 genwav.py
    ```
-
+   
+   - Call `eval.py`to synthesis.
    - The `./logs-tacotron/model.ckpt-0` is always the newest checkpoint. 
    - Also you can use excel file to automatic synthesis that the text in excel, you can set in `./genwav.py`.
    - If you want to synthesis more than one sentence, use excel file is mush faster.
    - Use excel is faster, because it only load the model once.
+
+### Another tool
+- `tl2ctl_client.py`: Call Tai-Luo to CTL api.
 
 ## Reference
   -  syang1993's implementation of gst-tacotron: https://github.com/syang1993/gst-tacotron
