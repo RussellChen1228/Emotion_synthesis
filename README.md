@@ -2,7 +2,7 @@
 
 A tensorflow implementation of the emotion synthesis.
 
-Emotions are include neutral, cry, scary, sad, angry and happy.
+Emotions include neutral, cry, scary, sad, angry and happy.
 
 ## Quick Start:
 
