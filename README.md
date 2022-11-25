@@ -1,6 +1,7 @@
 # Emotion Synthesis (Base on GST-Tacotron)
 
 A tensorflow implementation of the emotion synthesis.
+
 Emotions are include neutral, cry, scary, sad, angry and happy.
 
 ## Quick Start:
@@ -21,16 +22,16 @@ Emotions are include neutral, cry, scary, sad, angry and happy.
 
 1. **prepare a corpus:**
 
-   Put `metadata.scv` in `./corpus`: 
-   There are example in `./corpus/metadata.scv`
-   In each rows: `wav_file_name + | + text`
-   wav_file_name not include file extension
+   - Put `metadata.scv` in `./corpus`: 
+      - There are example in `./corpus/metadata.scv`
+      - In each rows: `wav_file_name + | + text`
+      - wav_file_name not include file extension
 
-   Put wavs file in  `./corpus/wavs`
-   Emotion set: E01:happy, E2:sad, E03:cry, E04:scary, E05:angry, SXX:neutral
-   Wav file name: EmotionSet_SpeakerID_TextNumber
-   Example: E01_M03_001.wav (Emotion=happy, SpeakerId=M03, TextNumber=001)
-   Example: S13_M13_005.wav (Emotion=neutral, SpeakerId=M13, TextNumber=005)
+   - Put wavs file in  `./corpus/wavs`
+      - Emotion set: E01:happy, E2:sad, E03:cry, E04:scary, E05:angry, SXX:neutral
+      - Wav file name: EmotionSet_SpeakerID_TextNumber
+      - Example: E01_M03_001.wav (Emotion=happy, SpeakerId=M03, TextNumber=001)
+      - Example: S13_M13_005.wav (Emotion=neutral, SpeakerId=M13, TextNumber=005)
 
 2. **Preprocess the data**
     
@@ -70,10 +71,10 @@ Emotions are include neutral, cry, scary, sad, angry and happy.
    python3 genwav.py
    ```
 
-   The `./logs-tacotron/model.ckpt-0` is always the newest checkpoint. 
-   Also you can use excel file to automatic synthesis that the text in excel, you can set in `./genwav.py`.
-   If you want to synthesis more than one sentence, use excel file is mush faster.
-   Use excel is faster, because it only load the model once.
+   - The `./logs-tacotron/model.ckpt-0` is always the newest checkpoint. 
+   - Also you can use excel file to automatic synthesis that the text in excel, you can set in `./genwav.py`.
+   - If you want to synthesis more than one sentence, use excel file is mush faster.
+   - Use excel is faster, because it only load the model once.
 
 ## Reference
   -  syang1993's implementation of gst-tacotron: https://github.com/syang1993/gst-tacotron
