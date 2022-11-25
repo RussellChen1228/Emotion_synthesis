@@ -9,7 +9,7 @@ emotion_encoding_table = {
     'E02' : 2,
     'E03':3, 
     'E04':4,
-    'E04' : 5,
+    'E05' : 5,
 }
 
 emotion_marker_table = {
